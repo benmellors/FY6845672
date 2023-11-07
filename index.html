@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple-Inspired Website</title>
+    <title>Advanced Article Website</title>
     <style>
         body {
             font-family: "Helvetica Neue", Arial, sans-serif;
@@ -16,6 +16,11 @@
             color: #fff;
             text-align: center;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         header h1 {
             font-size: 24px;
@@ -65,23 +70,32 @@
         p:hover {
             color: #3498db;
         }
+        .animate-on-load {
+            animation: slideInLeft 1s both;
+        }
+        .animate-on-hover {
+            transition: transform 0.3s;
+        }
+        .animate-on-hover:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Apple-Inspired Website</h1>
+        <h1>Welcome to the Advanced Article Website</h1>
     </header>
     <nav>
         <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Services</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
     </nav>
-    <img class="banner" src="download.png" alt="Banner" width="100%" height="auto">
+    <img class="banner animate-on-load" src="WebBanner.png" alt="Banner" width="100%" height="auto">
     <div class="container">
-        <h2>Welcome to Our Website</h2>
-        <p>This is a sample website layout inspired by Apple's design principles. Feel free to customize it to your needs.</p>
+        <h2 class="animate-on-load">Latest Research</h2>
+        <p class="animate-on-load">Explore cutting-edge scientific research and discoveries in various fields.</p>
+        <h2 class="animate-on-hover">Interactive Animations</h2>
+        <p class="animate-on-hover">Experience interactive animations and hover effects throughout the website.</p>
     </div>
 </body>
 </html>
